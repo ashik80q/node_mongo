@@ -9,9 +9,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 
-const dbUsers = process.env.DB_USER;
-const pass = process.env.DB_PASS;
-const uri = `mongodb+srv://${dbUsers}:${pass}@cluster0-94p8s.mongodb.net/test?retryWrites=true&w=majority`;
+
+const uri = process.env.DB_PATH;
 
 const client = new MongoClient(uri, { useNewUrlParser: true });
 const users = ['Ashik','Rohim', 'Korim', 'Jobbar','Kobir','Ashik']
